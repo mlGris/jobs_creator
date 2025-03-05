@@ -5,24 +5,24 @@ import os
 json = {
     "tables": [
         {
-            "datasourse_type": "",
-            "kafka": "",
-            "scheme": "",
-            "name": "",
-            "columns": [
-                {"alias": "", "column_name": "", "constraints": []},
+            "datasourse_type": "", # Тип источника данных
+            "kafka": "", # Ссылка на кафку
+            "scheme": "", # Схема, в которой будут созданы таблицы
+            "name": "",  # Алиас название таблицы
+            "columns": [ # Cписок необходимых полей с ограничениями
+                {"alias": "", "column_name": "", "constraints": []}, # Алиас, Название поля в источнике, ограничения
             ],
-            "from": "",
+            "from": "", # Основная таблица
             "where": """
                 where 
-                """,
-            "joins": [
+                """, # Условия
+            "joins": [ # Список джойнов
                 {
-                    "join_name": "",
-                    "join_type": "",
-                    "join_path": "",
+                    "join_name": "", # Алиас название джойна
+                    "join_type": "", # Тип джойна
+                    "join_path": "", # Таблица для присоединения
                     "join_on": """
-                            """
+                            """ # Условия присоединения
                 },
             ]
         },
